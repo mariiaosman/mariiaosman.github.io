@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+
+  
+<html lang="en">
+
+  <head>
+    <!--
+      TRACKING / ANALYTICS (optional)
+      Paste your own tracking code here, e.g. Matomo Tag Manager
+      or Google Tag Manager. ALWAYS use your own container – never someone else's.
+    -->
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!---Changed style of the quote, element class section-title
+     -->
+
+    <style> 
+      #quote { 
+        color: #0f766e;
+        text-align: left;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: large;
+        margin-top: 25px;
+      
+      }
+      #author {
+      color: #1e293b;
+      text-align: left;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-size: medium;
+      margin-top: 10px;
+      }
+      
+
+      </style>
+
+
+    <!-- The page title shown in the browser tab -->
+    <title> Mariia Osman – Digital Analysis, Implementation, CRO – CV</title>
+    <meta name="description" content="Digital Analysis, Data Analysis" />
+
+    <!-- W3.CSS – a ready-made CSS framework that gives us layout and classes (w3-...) -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- The Montserrat font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Your own stylesheet – this is where you make your design changes -->
+    <!---changed design of COLORS & FONTS in styles.css -->
+         
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Feather Icons – the icons for social media and the download button -->
+    <script src="https://unpkg.com/feather-icons@4.28.0/dist/feather.min.js"></script>
+    
+  </head>
+
+  <body>
+    <section>
+      <!-- ======================================================
+           Added button lang-toggle for translation 
+           added button and link to new page - portfolio
+           added key data-i18n
+           ====================================================== -->
+      <div class="w3-container w3-padding-16 w3-border-bottom w3-hide-medium w3-hide-large">
+        <button class="button lang-toggle">SV</button>
+
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="toggleNavigation()">&#9776;</a>
+      </div>
+      <div id="mobile-nav" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium w3-sticky">
+      
+        <a href="#about" data-i18n="about" class="nav-link w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar" onclick="toggleNavigation()" >ABOUT</a>
+        <a href="#resume" data-i18n="resume" class="nav-link w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar" onclick="toggleNavigation()">RESUME</a>
+        <a href="#contact" data-i18n="contact" class="nav-link w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar" onclick="toggleNavigation()">CONTACT</a>
+        <
+      </div>
+
+    </section>
+      <!-- ======================================================
+           LEFT COLUMN: PICTURE, SOCIAL MEDIA AND CV BUTTON
+           ====================================================== -->
+      <section class="image-section w3-quarter w3-fixed w3-padding-small">
+
+        <!-- PROFILE PICTURE: replace "avatar.png" with the name of your own image, e.g. "my-photo.jpg" -->
+        <img src="./IMG_2714.jpg" alt="Profile picture of Mariia" class="profile-img w3-circle w3-border" />
+
+        <!-- SOCIAL MEDIA: replaced "#" with the link to my profile.
+          -->
+        <div class="links w3-margin-top w3-padding-small">
+          <a class="icon-link" href="https://www.linkedin.com/in/mariia-osman" target="_blank" aria-label="LinkedIn">
+          
+            <i data-feather="linkedin"></i>
+          </a>
+           
+        </div>
+
+        <!-- DOWNLOAD CV: put a PDF of your CV in this folder and name it "cv.pdf" -->
+        <div class="w3-container w3-padding-16">
+          <a href="./cv_Mariia.pdf" class="download-btn w3-button w3-round-small w3-padding-large" target="_blank" download="cv.pdf">
+            <i data-feather="arrow-down" style="vertical-align: -0.35em;"></i>
+            <span class="w3-margin-left download-text">DOWNLOAD CV</span>
+           
+          </a>
+        </div>
+      </section>
+
+      <!-- ======================================================
+           RIGHT COLUMN: THE CV CONTENT 
+        
+           ====================================================== -->
+      <section class="w3-threequarter w3-padding-large w3-right">
+
+        <!-- DESKTOP NAVIGATION Added button lang-toggle for translation 
+           added button and link to new page - portfolion, added key data-i18n for fun translation-->
+           
+        <div class="w3-container w3-padding-large w3-border-bottom w3-hide-small">
+          <button class="button lang-toggle"> SV</button>
+              
+          <a href="#contact" data-i18n="contact" class="nav-link w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-right">CONTACT</a>
+          <a href="#resume" data-i18n="resume" class="nav-link w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-right">RESUME</a>
+          <a href="#about" data-i18n="about" class="nav-link w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-right">ABOUT</a>
+          
+          
+        </div>
+
+        
+          
+
+          <!-- ======================================================
+               HOME SECTION – name, title and quote
+
+               ///Added ID to elements quote, changed div class 
+               Added "key" data-i18n to title
+              
+               ====================================================== -->
+        
+            <p id="quote">"In God we trust; all others must bring data." 
+            </p id ="author"> - W. Edwards Deming </p>
+              
+            <div class="content-container w3-margin-top-2"> 
+               
+              <h1 data-i18n="name"> Mariia Osman</h1>
+              
+              <h2 data-i18n="title"> Digital Analysis, Implementation, CRO </h2>
+             
+            </div>
+          <!-- ======================================================
+               ABOUT
+               Added ID, key data-i18n to elements for tranlation 
+               ====================================================== -->
+          <div id="about" class="w3-container w3-margin-top-20-percent w3-large">
+            <h2 data-i18n="about" class="section-title">ABOUT</h2>
+            <p data-i18n="about_text" class="w3-margin-top-2">
+              Digital marketer with 10 years of hands-on experience in Google Ads and Meta Ads, currently studying Digital Analytics at Borås Higher Vocational Education (YH). I combine analytical thinking with a strong focus on business value, and I am seeking an internship in digital analytics, implementation, data visualization, and CRO where I can apply and expand my expertise.
+            </p>
+          </div>
+
+          <!-- ======================================================
+               RESUME
+               Added ID, key- data-i18n to the elements for translation function 
+               ====================================================== -->
+          <div id="resume" class="w3-container w3-margin-top-20-percent">
+            <h2 data-i18n="resume" class="section-title">RESUME</h2>
+
+            <!-- ---------- WORK EXPERIENCE ----------
+                 Copy a whole <div class="cv-item"> ... </div> block
+                 to add more jobs. Put your most recent job first. -->
+            <div class="w3-container w3-margin-top-2">
+              <h3 data-i18n="experience"> WORK EXPERIENCE</h3>
+
+              <!-- Job 1 -->
+              <div class="cv-item">
+                <h4 data-i18n="work1"> Performance marketing consultant – Part-time, Bogren Digital, Orebro </h4>
+                <p class="cv-date"> 2023 – 2026</p>
+                <ul class="w3-ul">
+                  <li data-i18n="work_detail_1"> Responsible for planering, setting up and optimising paid digital channels Google Ads, Microsoft Ads and Meta Ads </li>
+                  <li> Google Ads editor, GA4, GTM, Google studio</li>
+                  
+                </ul>
+              </div>
+
+              <!-- Job 2 -->
+              <div class="cv-item">
+                <h4 data-i18n="work2"> Perfomance Marketing Specialist – Self-employed via Upwork </h4>
+                <p class="cv-date">2018 – ongoing </p>
+                <ul class="w3-ul">
+                  <li data-i18n="work_detail_2">Planering, setting and optimising paid digital channels. I’ve been working with more than 50 companies from USA, Canada and Europe for the last 8 years.  </li>
+                  <li>Google Ads, Microsoft Ads, Meta Ads</li>
+                </ul>
+              </div>
+
+              <!-- Job 3 -->
+              <div class="cv-item">
+                <h4 data-i18n="work3">Digital Marketing Specialist – By Buety, Kyiv</h4>
+                <p class="cv-date">2017 – 2018</p>
+                <ul class="w3-ul">
+                  <li data-i18n="work_detail_3">Planering, setting and optimising digital activities in paid and organic channels</li>
+                  <li>Google Ads, SEO, e-mail marketing</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- ---------- EDUCATION ---------- -->
+            <div class="w3-container w3-margin-top-2">
+              <h3 data-i18n="education"> EDUCATION</h3>
+
+              <!-- Education 1 -->
+              <div class="cv-item">
+                <h4 data-i18n="education1">Digital Analytics – Borås YH, Varberg</h4>
+                <p class="cv-date">2026 – 2028</p>
+                <ul class="w3-ul">
+                  <li data-i18n="education_text1">Implementation, GTM. Web analytics, GA4, Visualisation. Deep Analysis SQL, Power BI. CRO.</li>
+                </ul>
+              </div>
+
+              <!-- Education 2 -->
+              <div class="cv-item">
+                <h4 data-i18n="education2">Marketing/Bachelor's degree – Kyiv National Economic University, Kyiv</h4>
+                <p class="cv-date">2000 – 2005</p>
+                <ul class="w3-ul">
+                  <li data-i18n="education_text2">Marketing in enterprises and manufacturing facilities</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- ---------- SKILLS ---------- -->
+            <div class="w3-container w3-margin-top-2">
+              <h3 data-i18n="skills">SKILLS</h3>
+
+              <h4 data-i18n="soft_skills">Soft skills</h4>
+              <ul class="w3-ul">
+                <li data-i18n="soft1"> Structured – I plan and follow up on my projects </li>
+                <li data-i18n="soft2"> Adaptability – Working across different industries, countries and markets </li>
+                <li data-i18n="soft3"> Problem-solving – Finding out why tracking doesn't work or why a campaign underperforms </li>
+              </ul>
+
+              <h4 data-i18n="tech_skills">Technical skills</h4>
+              <ul class="w3-ul">
+                <li>Tools: GA4, Google Tag Manager, Google Studio</li>
+                <li>Languages/technologies: HTML, CSS, Javascript</li>
+                <li>Excel, Google editor</li>
+              </ul>
+
+              <h4 data-i18n="langs">Languages</h4>
+              <ul class="w3-ul">
+                <li>English – fluent</li>
+                <li>Swedish – fluent</li>
+                <li>Ukranian – native</li>
+              </ul>
+            </div>
+
+            <!-- ---------- INTERESTS ---------- -->
+            <div class="w3-container w3-margin-top-2">
+              <h3 data-i18n="interests">INTERESTS</h3>
+              <ul class="w3-ul">
+                <li>Data analyst</li>
+                <li>Digital marketing</li>
+                <li>Books</li>
+                <li>Art</li>
+              </ul>
+            </div>
+
+            <!-- ---------- REFERENCES ---------- -->
+            <div class="w3-container w3-margin-top-2">
+              <h3 data-i18n="ref">REFERENCES</h3>
+              <p data-i18n="ref1">References available upon request</p>
+            </div>
+          </div>
+
+          <!-- ======================================================
+               CONTACT
+               ====================================================== -->
+          <div id="contact" class="w3-container w3-margin-top-20-percent">
+            <h2 class="section-title" data-i18n="contact">CONTACT</h2>
+            <div class="contact-details w3-margin-top-2">
+              <p><strong>Name:</strong> Mariia Osman</p>
+              <p><strong>City:</strong> Varberg</p>
+              <p><strong>Phone:</strong> +46 70 499 47 40</p>
+              <p><strong>Email:</strong> <a href="mailto:mariya.borodulina@gmail.com">mariya.borodulina@gmail.com</a></p>
+              <p><strong>LinkedIn:</strong> <a href="#" target="_blank">https://www.linkedin.com/in/mariia-osman</a></p>
+            </div>
+          </div>
+
+          <!-- ======================================================
+               FOOTER
+               ====================================================== -->
+          <footer class="w3-container w3-border-top w3-center w3-margin-top-4">
+            
+            <p>© 2026 – Mariia Osman</p>
+          
+          </footer>
+
+        </div>
+      </section>
+    </section>
+
+    <!-- ======================================================
+         JAVASCRIPT
+         Placed at the end of <body> so all the HTML has loaded first.
+          /// Function const transaction 
+          /// Function set language, check language if sv or en
+         ====================================================== -->
+    <script> 
+    feather.replace()
+    console.log("Script is running");
+
+      // Shows/hides the extra information. /// I will use it later 
+      function showMore() {
+        let info = document.getElementById("extraInfo");
+        if (info.style.display === "none") {
+          info.style.display = "block";
+        } else {
+          info.style.display = "none";
+        }
+      }
+      // Open and close the mobile menu
+        function toggleNavigation() {
+          document.getElementById("mobile-nav").classList.toggle("w3-show");
+        }
+
+
+
+      // 1. Translations each elements, used unik keys and ","
+    
+    
+    const translations = {
+      en: { 
+        menu_portfolio: "PORTFOLIO",
+  
+        title: "Digital Analysis, Implementation, CRO",
+        about: "ABOUT",
+        about_text: "Digital marketer with 10 years of hands-on experience in Google Ads and Meta Ads, currently studying Digital Analytics at Borås Higher Vocational Education (YH). I combine analytical thinking with a strong focus on business value, and I am seeking an internship in digital analytics, implementation, data visualization, and CRO where I can apply and expand my expertise.",
+        resume:"RESUME",
+        experience: "WORK EXPERIENCE",
+        work1: "Performance marketing consultant – Part-time, Bogren Digital, Orebro",
+        work_detail_1: "Responsible for planering, setting up and optimising paid digital channels Google Ads, Microsoft Ads and Meta Ads.",
+        work2: "Performance Marketing Specialist – Self-empoyed via Upwork",
+        work_detail_2: "Planering, setting and optimising paid digital channels. I’ve been working with more than 50 companies from USA, Canada and Europe for the last 8 years.",
+        work3: "Digital Marketing Specialist – By Buety, Kyiv",
+        work_detail_3: "Planering, setting and optimising digital activities in paid and organic channels",
+        education: "EDUCATION",
+        skills: "SKILLS",
+        contact: "CONTACT",
+        education1:"Digital Analytics – Boros YH, Varberg",
+        education_text1: "Implementation, GTM. Web analytics, GA4. Visualisation. Deep Analysis SQL, Power BI. CRO.",
+        education2: "Marketing/Bachelor's degree – Kyiv National Economic University, Kyiv",
+        education_text2: "Marketing in enterprises and manufacturing facilities", 
+        soft_skills: "Soft skills", 
+        soft1: "Structured – I plan and follow up on my projects",
+        soft2: "Adaptability – working across different industries, countries and markets",
+        soft3: "Problem-solving – finding out why tracking doesn't work or why a campaign underperforms",
+        tech_skills: "Technical skills",
+        langs: "Languages",
+        interests: "INTERESTS",
+        ref: "REFERENCES",
+        ref1:"References available upon request"
+
+      },
+      sv: {
+       
+        menu_portfolio: "PORTFOLIO",
+        title: "Digital Analys, Implementering, CRO",
+        about: "OM MIG",
+        about_text: "Digital marknadsförare med 10 års praktisk erfarenhet av Google Ads och Meta Ads, som för närvarande studerar digital analys på Borås YH. Jag kombinerar ett analytiskt tänkande med en stark känsla för affärsnytta, och söker en LIA-plats inom digital analys, implementering, datavisualisering och CRO där jag kan tillämpa och fördjupa mina kunskaper.",
+        resume: "RESUME",
+        experience: "ARBETSERFARENHET",
+        work1: "Performance marketing-konsult – Deltid, Bogren Digital, Örebro",
+        work_detail_1: "Ansvarig för planering, uppsättning och optimering av betalda digitala kanaler Google Ads, Microsoft Ads och Meta Ads.",
+        work2: "Performance marknadsförings Specialist – Egenföretagare via Upwork",
+        work_detail_2: "Planering, konfigurering och optimering av betalda digitala kanaler. Jag har arbetat med fler än 50 företag från USA, Kanada och Europa under de senaste 8 åren",
+        work3: "Specialist på digital marknadsföring – By Buety, Kyiv",
+        work_detail_3: "Planering, konfigureringoch optimering av digitala aktiviteter i betalda och organiska kanaler",
+        education: "UTBILDNING",
+        skills: "FÄRDIGHETER",
+        contact: "KONTAKT",
+        education1: "Digital Analytiker – Borås YH, Varberg",
+        education_text1: "Implementering, GTM. Webbanalys, GA4. Visualisering. Djupanalys, SQL, Power BI. CRO.",
+        education2: "Marknadsföring/Kandidatexamen – Kyivs nationella ekonomiska universitet, Kyiv",
+        education_text2: "Marknadsföring i företag och tillverkningsanläggningar", 
+        soft_skills: "Mjuka färdigheter",
+        soft1: "Strukturerad – jag planerar och följer upp mina projekt",
+        soft2: "Anpassningsförmåga – att arbeta inom olika branscher, länder och marknader",
+        soft3: "Problemlösning – att ta reda på varför spårning inte fungerar eller varför en kampanj underpresterar",
+        tech_skills: "Tekniska färdigheter",
+        langs: "Språk",
+        interests: "INTRESSEN",
+        ref: "REFERENSER",
+        ref1: "Referenser lämnas på begäran."
+      }
+
+    };
+    const langButtons = document.querySelectorAll(".lang-toggle");
+     
+    // 2. A function that changes the language
+ function setLanguage(lang) {
+  // change all texts with key
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.dataset.i18n;
+    if (translations[lang][key]) {
+      el.textContent = translations[lang][key];
+    }
+  });
+
+  // remember the language
+  document.documentElement.lang = lang;
+  localStorage.setItem("lang", lang);
+
+  // checking 
+  langButtons.forEach(btn => {
+    btn.textContent = lang === "en" ? "SV" : "EN";
+  });
+}
+
+    // 3. When someone clicks button CV or EN, switch the language
+langButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const current = document.documentElement.lang === "sv" ? "sv" : "en";
+    setLanguage(current === "en" ? "sv" : "en");
+  });
+});
+
+// 4. Start the page in the saved language (always LAST)
+setLanguage(localStorage.getItem("lang") || "en");
+
+
+
+    </script>
+  </body>
+</html>
